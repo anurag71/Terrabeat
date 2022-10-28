@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect, useState} from 'react';
+import Properties from './properties';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+    const App = () =>  {
+
+      const [properties, setProperties] = useState([]);
+
+      useEffect(() => {
+        async function fetchVideos(){
+          const response = await fetch('http://localhost:3000/properties.json');
+          const fetchedProperties = await response.json(response);
+          setProperties(fetchedProperties);
+        }
+        fetchVideos();
+      }, []);
+
+         return (
+          <Properties properties={properties} />
+        )
+
+        
+
+
+
+      };
+
+    export default App;

@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "title": "Hot Springs",
+        "location": "Bentonville, AR",
+        "price": 109,
+        "short_description": "TODO: Add Description",
+        "description": "TODO: Add Description",
+        "bedrooms": 2,
+        "bathrooms": 1,
+        "cleaning_fees": 10,
+        "service_fees": 10,
+        "rating": 4.5,
+        "images": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+        ],
+        "extras": "Free cancellation"
+    },
+    {
+        "id": 2,
+        "title": "Alexis Hotel & Banquets",
+        "location": "Dallas, TX",
+        "price": 90,
+        "short_description": "TODO: Add Description",
+        "description": "TODO: Add Description",
+        "bedrooms": 3,
+        "bathrooms": 3,
+        "cleaning_fees": 15,
+        "service_fees": 25,
+        "rating": 5.0,
+        "images": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "extras":"Pets Allowed"
+    },
+    {
+        "id": 3,
+        "title": "Candlewood Suites",
+        "location": "Dallas, TX",
+        "price": 82,
+        "short_description": "TODO: Add Description",
+        "description": "TODO: Add Description",
+        "bedrooms": 5,
+        "bathrooms": 4.5,
+        "cleaning_fees": 15,
+        "service_fees": 40,
+        "rating": 4.3,
+        "images": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+        ],
+        "extras": "Includes breakfast & dinner"
+    },
+    {
+        "id": 4,
+        "title": "1 BR near Downtown",
+        "location": "Dallas, TX",
+        "price": 75,
+        "short_description": "TODO: Add Description",
+        "description": "TODO: Add Description",
+        "cleaning_fees": 5,
+        "service_fees": 8,
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "rating": 4.3,
+        "images": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+        ],
+        "extras":"Stocked Kitchen"
+    },
+    {
+        "id": 5,
+        "title": "East Side Beehive",
+        "location": "Boston, MA",
+        "price": 120,
+        "short_description": "TODO: Add Description",
+        "description": "TODO: Add Description",
+        "bedrooms": 2,
+        "bathrooms": 1.5,
+        "cleaning_fees": 18,
+        "service_fees": 40,
+        "rating": 4.9,
+        "images": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "extras":"High Speed WiFi"
+    }
+]

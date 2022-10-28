@@ -15,25 +15,19 @@
 <!----------------------------------------------------------------------------------------------------------------->
 
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gelasio">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
 
     <script>
-        $(document).ready(function () {
+        $(document).ready(function(){
             [...document.querySelectorAll('[data-bs-toggle="popover"]')]
-                .forEach(el => new bootstrap.Popover(el))
+            .forEach(el => new bootstrap.Popover(el))
             chooseDate("check-in-date")
             chooseDate("check-out-date")
             $('#range_03').ionRangeSlider({
@@ -52,17 +46,17 @@
             });
         });
 
-        function chooseDate(e) {
-            var date_input = $('input[name="' + e + '"]'); //our date input has the name "date"
-            var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
-            var options = {
+        function chooseDate(e){
+            var date_input=$('input[name="'+e+'"]'); //our date input has the name "date"
+            var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+            var options={
                 format: 'mm/dd/yyyy',
                 container: container,
                 todayHighlight: true,
                 autoclose: true,
-            };
-            date_input.datepicker(options);
-        }
+        };
+        date_input.datepicker(options);
+}
 
     </script>
 
@@ -80,21 +74,18 @@
 
 <body>
 
-    <!------------------------------------------------ Header starts -------------------------------------------------->
+<!------------------------------------------------ Header starts -------------------------------------------------->
 
     <header class="sticky-lg-top">
         <nav class="navbar navbar-expand-lg p-3 ps-5 pe-5 custom-navbar">
             <div class="container-fluid">
 
-                <button class="btn navbar-brand" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><img
-                        src="img\project-logo.svg" alt="Logo" width="50" height="44" class="d-inline-block ">
-                    TerraGate</button>
+                <a class="navbar-brand">
+                    <img src="img\project-logo.svg" alt="Logo" width="50" height="44" class="d-inline-block ">
+                    TerraGate
+                </a>
 
-
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -102,28 +93,18 @@
                     <div class="row d-flex mx-auto my-auto col-md-5 p-2">
                         <div class="mx-auto d-flex">
                             <div class="input-group d-flex">
-                                <input class="form-control border-end-0 border rounded-pill shadow" type="search"
-                                    placeholder="Find your next dream stay" id="example-search-input">
+                                <input class="form-control border-end-0 border rounded-pill shadow" type="search" placeholder="Find your next dream stay" id="example-search-input">
                                 <span class="input-group-append my-auto mx-auto d-flex">
-                                    <button
-                                        class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill ms-n5"
-                                        type="button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="23" fill="black"
-                                            class="bi bi-search" viewBox="0 0 16 16">
-                                            <path
-                                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                    <button class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill ms-n5" type="button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="23" fill="black" class="bi bi-search" viewBox="0 0 16 16">
+                                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                                         </svg>
                                     </button>
                                 </span>
                                 <span class="input-group-append my-auto mx-auto d-flex rounded-pill shadow">
-                                    <a class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill"
-                                        data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
-                                        aria-expanded="false" aria-controls="multiCollapseExample1"><svg
-                                            xmlns="http://www.w3.org/2000/svg" width="16" height="23" fill="black"
-                                            class="bi bi-list" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-                                        </svg></a>
+                                    <a class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="23" fill="black" class="bi bi-list" viewBox="0 0 16 16">
+                                      <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                                  </svg></a>
                                 </span>
                             </div>
                         </div>
@@ -135,19 +116,15 @@
                         </li>
 
                         <li class="nav-item p-2 mx-auto my-auto">
-                            <button type="button" class="btn btn-secondary bg-light rounded-pill mx-auto my-auto"
-                                data-container="body" data-bs-toggle="popover" placement="bottom"
-                                data-bs-trigger="focus" data-bs-html="true" data-bs-content='
+                            <button type="button" class="btn btn-secondary bg-light rounded-pill mx-auto my-auto" data-container="body" data-bs-toggle="popover" placement="bottom" data-bs-trigger="focus" data-bs-html="true" data-bs-content='
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item">Sign in</li>
                                         <li class="list-group-item">Sign up</li>
                                     </ul>
                                '>
 
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black"
-                                    class="bi bi-person-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                                 </svg>
 
                             </button>
@@ -157,126 +134,112 @@
             </div>
         </nav>
         <div class="collapse multi-collapse border-top" id="multiCollapseExample1">
-            <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
-                <div class="container-fluid">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <div class="d-flex d-flex  ">
-                                <div class="p-2 col-sm-4 col-4 align-middle navbar-labels">
-                                    <span>Check In:</span>
-                                </div>
-                                <div class="p-2 col-sm-8 col-8 my-auto mx-auto">
-                                    <div class="input-group w-auto my-auto mx-auto">
-                                        <input class="form-control" id="from-date" name="from-date"
-                                            placeholder="MM/DD/YYY" type="text" />
-                                    </div>
+        <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+            <div class="container-fluid">
+                <ul class="navbar-nav">
+                    <li class="nav-item">                     
+                        <div class="d-flex d-flex  ">
+                            <div class="p-2 col-sm-4 col-4 align-middle navbar-labels">
+                                <span>Check In:</span>
+                            </div>
+                            <div class="p-2 col-sm-8 col-8 my-auto mx-auto">
+                                <div class="input-group w-auto my-auto mx-auto">
+                                    <input class="form-control" id="from-date" name="from-date" placeholder="MM/DD/YYY" type="text"/>
                                 </div>
                             </div>
-                        </li>
+                        </div>
+                    </li>
 
-                        <li class="nav-item">
-                            <div class="d-flex d-flex  ">
-                                <div class="p-2 col-sm-4 col-4 align-middle navbar-labels">
-                                    <span>Check Out:</span>
-                                </div>
-                                <div class="p-2 col-sm-8 col-8 my-auto mx-auto">
-                                    <div class="input-group w-auto my-auto mx-auto">
-                                        <input class="form-control" id="to-date" name="to-date" placeholder="MM/DD/YYY"
-                                            type="text" />
-                                    </div>
+                    <li class="nav-item">                     
+                        <div class="d-flex d-flex  ">
+                            <div class="p-2 col-sm-4 col-4 align-middle navbar-labels">
+                                <span>Check Out:</span>
+                            </div>
+                            <div class="p-2 col-sm-8 col-8 my-auto mx-auto">
+                                <div class="input-group w-auto my-auto mx-auto">
+                                    <input class="form-control" id="to-date" name="to-date" placeholder="MM/DD/YYY" type="text"/>
                                 </div>
                             </div>
-                        </li>
+                        </div>
+                    </li>
 
-                        <li class="nav-item">
-                            <div class="d-flex d-flex  ">
-                                <div class="p-2 col-sm-4 col-4 align-middle navbar-labels">
-                                    <span>Guests:</span>
-                                </div>
-                                <div class="p-2 col-sm-8 col-8 my-auto mx-auto">
-                                    <div class="input-group w-auto my-auto mx-auto">
-                                        <input type="button" value="-" id="decrement" onclick='decrementValue("guests")'
-                                            class="button-minus border rounded-circle  icon-shape icon-sm mx-1 "
-                                            data-field="quantity">
-                                        <input type="number" id="guests" step="1" max="10" value="1" name="quantity"
-                                            class="quantity-field border-0 text-center w-25" style="border-radius:10px">
-                                        <input type="button" value="+" id="increment" onclick='incrementValue("guests")'
-                                            class="button-plus border rounded-circle icon-shape icon-sm "
-                                            data-field="quantity">
-                                    </div>
+                    <li class="nav-item">                     
+                        <div class="d-flex d-flex  ">
+                            <div class="p-2 col-sm-4 col-4 align-middle navbar-labels">
+                                <span>Guests:</span>
+                            </div>
+                            <div class="p-2 col-sm-8 col-8 my-auto mx-auto">
+                                <div class="input-group w-auto my-auto mx-auto">
+                                    <input type="button" value="-" id="decrement" onclick='decrementValue("guests")' class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="quantity">
+                                    <input type="number" id="guests" step="1" max="10" value="1" name="quantity" class="quantity-field border-0 text-center w-25" style="border-radius:10px">
+                                    <input type="button" value="+" id = "increment" onclick='incrementValue("guests")' class="button-plus border rounded-circle icon-shape icon-sm " data-field="quantity">
                                 </div>
                             </div>
-                        </li>
+                        </div>
+                    </li>
 
-                        <li class="nav-item">
-                            <div class="d-flex d-flex  ">
-                                <div class="p-2 col-sm-4 col-4 align-middle navbar-labels">
-                                    <span>Bedroom:</span>
-                                </div>
-                                <div class="p-2 col-sm-8 col-8 my-auto mx-auto">
-                                    <div class="input-group w-auto my-auto mx-auto">
-                                        <input type="button" value="-" onclick='decrementValue("bedrooms")'
-                                            class="button-minus border rounded-circle  icon-shape icon-sm mx-1 "
-                                            data-field="quantity">
-                                        <input type="number" step="1" id="bedrooms" max="10" value="1" name="quantity"
-                                            class="quantity-field border-0 text-center w-25" style="border-radius:10px">
-                                        <input type="button" value="+" onclick='incrementValue("bedrooms")'
-                                            class="button-plus border rounded-circle icon-shape icon-sm lh-0"
-                                            data-field="quantity">
-                                    </div>
+                    <li class="nav-item">                     
+                        <div class="d-flex d-flex  ">
+                            <div class="p-2 col-sm-4 col-4 align-middle navbar-labels">
+                                <span>Bedroom:</span>
+                            </div>
+                            <div class="p-2 col-sm-8 col-8 my-auto mx-auto">
+                                <div class="input-group w-auto my-auto mx-auto">
+                                    <input type="button" value="-" onclick='decrementValue("bedrooms")' class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " data-field="quantity">
+                                    <input type="number" step="1" id="bedrooms" max="10" value="1" name="quantity" class="quantity-field border-0 text-center w-25" style="border-radius:10px">
+                                    <input type="button" value="+" onclick='incrementValue("bedrooms")' class="button-plus border rounded-circle icon-shape icon-sm lh-0" data-field="quantity">
                                 </div>
                             </div>
-                        </li>
+                        </div>
+                    </li>
 
-                        <li class="nav-item">
-                            <div class="d-flex d-flex  ">
-                                <div class="p-2 col-sm-4 col-4 align-middle navbar-labels">
-                                    <span>Bathroom:</span>
-                                </div>
-                                <div class="p-2 col-sm-8 col-8 my-auto mx-auto">
-                                    <div class="input-group w-auto my-auto mx-auto">
-                                        <input type="button" value="-" onclick='decrementValue("bathrooms")'
-                                            class="button-minus border rounded-circle  icon-shape icon-sm mx-1 lh-0"
-                                            data-field="quantity">
-                                        <input type="number" step="1" id="bathrooms" max="10" value="1" name="quantity"
-                                            class="quantity-field border-0 text-center w-25" style="border-radius:10px">
-                                        <input type="button" value="+" onclick='incrementValue("bathrooms")'
-                                            class="button-plus border rounded-circle icon-shape icon-sm lh-0"
-                                            data-field="quantity">
-                                    </div>
+                    <li class="nav-item">                     
+                        <div class="d-flex d-flex  ">
+                            <div class="p-2 col-sm-4 col-4 align-middle navbar-labels">
+                                <span>Bathroom:</span>
+                            </div>
+                            <div class="p-2 col-sm-8 col-8 my-auto mx-auto">
+                                <div class="input-group w-auto my-auto mx-auto">
+                                    <input type="button" value="-" onclick='decrementValue("bathrooms")' class="button-minus border rounded-circle  icon-shape icon-sm mx-1 lh-0" data-field="quantity">
+                                    <input type="number" step="1" id="bathrooms" max="10" value="1" name="quantity" class="quantity-field border-0 text-center w-25" style="border-radius:10px">
+                                    <input type="button" value="+" onclick='incrementValue("bathrooms")' class="button-plus border rounded-circle icon-shape icon-sm lh-0" data-field="quantity">
                                 </div>
                             </div>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
-    <!--Header Ends-->
+<!--Header Ends-->
 
-    <!--------------------------------------------- Body Content starts ----------------------------------------------->
+<!--------------------------------------------- Body Content starts ----------------------------------------------->
 
-    <main>
-        <div class="container-fluid">
-            <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasRightLabel">Filters</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div> 
-                <div class="offcanvas-body">
+<main>
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <!-------------------------------------- Left Menu ------------------------------------------>
+            
+            <div class="col-lg-3 col-md-12">
+
                 <div class="me-2">
-                        <div class="container p-1">
+                    <div class="card m-3 shadow">
+                        <div class="card-header">
+                            Filters
+                        </div>
+                        <div class="container p-2">
                             <div class="accordion" id="accordionExample">
 
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                            aria-expanded="false" aria-controls="collapseOne">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                             Price
                                         </button>
                                     </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse"
-                                        aria-labelledby="headingOne" data-bs-parent="#FilterAccordion">
+                                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#FilterAccordion">
                                         <div class="accordion-body">
                                             <input type="text" id="range_03" name="example_name" value="" />
                                         </div>
@@ -285,42 +248,28 @@
 
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                            aria-expanded="false" aria-controls="collapseTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                             Ratings
                                         </button>
                                     </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse"
-                                        aria-labelledby="headingTwo" data-bs-parent="#FilterAccordion">
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#FilterAccordion">
                                         <div class="accordion-body pt-2 pb-2">
                                             <div>
-                                                <div class="btn-group" role="group"
-                                                    aria-label="Rating Button Group">
-                                                    <input type="checkbox" class="btn-check p-1" id="btncheck1"
-                                                        autocomplete="off">
-                                                    <label class="btn btn-outline-secondary m-0 p-1 btn-text"
-                                                        for="btncheck1">5 Star</label>
-
-                                                    <input type="checkbox" class="btn-check p-1" id="btncheck2"
-                                                        autocomplete="off">
-                                                    <label class="btn btn-outline-secondary m-0 p-1 btn-text"
-                                                        for="btncheck2">4 Star</label>
-
-                                                    <input type="checkbox" class="btn-check p-1" id="btncheck3"
-                                                        autocomplete="off">
-                                                    <label class="btn btn-outline-secondary m-0 p-1 btn-text"
-                                                        for="btncheck3">3 Star</label>
-
-                                                    <input type="checkbox" class="btn-check p-1" id="btncheck4"
-                                                        autocomplete="off">
-                                                    <label class="btn btn-outline-secondary m-0 p-1 btn-text"
-                                                        for="btncheck4">2 Star</label>
-
-                                                    <input type="checkbox" class="btn-check p-1" id="btncheck5"
-                                                        autocomplete="off">
-                                                    <label class="btn btn-outline-secondary m-0 p-1 btn-text"
-                                                        for="btncheck5">1 Star</label>
+                                                <div class="btn-group" role="group" aria-label="Rating Button Group">
+                                                    <input type="checkbox" class="btn-check p-1" id="btncheck1" autocomplete="off">
+                                                    <label class="btn btn-outline-secondary m-0 p-1 btn-text" for="btncheck1">5 Star</label>
+                            
+                                                    <input type="checkbox" class="btn-check p-1" id="btncheck2" autocomplete="off">
+                                                    <label class="btn btn-outline-secondary m-0 p-1 btn-text" for="btncheck2">4 Star</label>
+                            
+                                                    <input type="checkbox" class="btn-check p-1" id="btncheck3" autocomplete="off">
+                                                    <label class="btn btn-outline-secondary m-0 p-1 btn-text" for="btncheck3">3 Star</label>
+                            
+                                                    <input type="checkbox" class="btn-check p-1" id="btncheck4" autocomplete="off">
+                                                    <label class="btn btn-outline-secondary m-0 p-1 btn-text" for="btncheck4">2 Star</label>
+                            
+                                                    <input type="checkbox" class="btn-check p-1" id="btncheck5" autocomplete="off">
+                                                    <label class="btn btn-outline-secondary m-0 p-1 btn-text" for="btncheck5">1 Star</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -329,56 +278,45 @@
 
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                            aria-expanded="false" aria-controls="collapseThree">
-                                            Distance
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                             Distance
                                         </button>
                                     </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse"
-                                        aria-labelledby="headingThree" data-bs-parent="#FilterAccordion">
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#FilterAccordion">
                                         <div class="accordion-body">
-                                            <input type="text" id="distance-range-slider"
-                                                name="distance-range-slider" value="" />
+                                            <input type="text" id="distance-range-slider" name="distance-range-slider" value="" />
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingFour">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseFour"
-                                            aria-expanded="false" aria-controls="collapseFour">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                             Place Type
                                         </button>
                                     </h2>
-                                    <div id="collapseFour" class="accordion-collapse collapse"
-                                        aria-labelledby="headingFour" data-bs-parent="#FilterAccordion">
+                                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#FilterAccordion">
                                         <div class="accordion-body">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="private-room-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="private-room-check">
                                                 <label class="form-check-label" for="private-room-check">
                                                     Private Room
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="entire-house-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="entire-house-check">
                                                 <label class="form-check-label" for="entire-house-check">
                                                     Entire House
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="hotel-room-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="hotel-room-check">
                                                 <label class="form-check-label" for="hotel-room-check">
                                                     Hotel Room
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="shared-room-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="shared-room-check">
                                                 <label class="form-check-label" for="shared-room-check">
                                                     Shared Room
                                                 </label>
@@ -389,75 +327,75 @@
 
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingFive">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseFive"
-                                            aria-expanded="false" aria-controls="collapseFive">
-                                            Amenities
-                                        </button>
-                                    </h2>
-                                    <div id="collapseFive" class="accordion-collapse collapse"
-                                        aria-labelledby="headingFive" data-bs-parent="#FilterAccordion">
-                                        <div class="accordion-body">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="wifi-amenity-check">
-                                                <label class="form-check-label" for="wifi-amenity-check">
-                                                    Wi-Fi
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="television-amenity-check">
-                                                <label class="form-check-label" for="television-house-check">
-                                                    Television
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="refrigerator-amenity-check">
-                                                <label class="form-check-label" for="refrigerator-amenity-check">
-                                                    Refrigerator
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="washer-amenity-check">
-                                                <label class="form-check-label" for="washer-room-check">
-                                                    Washer
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="dryer-amenity-check">
-                                                <label class="form-check-label" for="dryer-amenity-check">
-                                                    Dryer
-                                                </label>
-                                            </div>
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        Amenities
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#FilterAccordion">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="wifi-amenity-check">
+                                            <label class="form-check-label" for="wifi-amenity-check">
+                                                Wi-Fi
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="television-amenity-check">
+                                            <label class="form-check-label" for="television-house-check">
+                                                Television
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="refrigerator-amenity-check">
+                                            <label class="form-check-label" for="refrigerator-amenity-check">
+                                                Refrigerator
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="washer-amenity-check">
+                                            <label class="form-check-label" for="washer-room-check">
+                                                Washer
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="dryer-amenity-check">
+                                            <label class="form-check-label" for="dryer-amenity-check">
+                                                Dryer
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </div>
+    </div> 
+    
+
+
+
+
+
+
+
+
+
+
+
+
             </div>
-        </div>
-            <div class="row">
 
-                <!-------------------------------------- Left Menu ------------------------------------------>
+            <!---------------------------------- Main Content Area -------------------------------------->
 
-                
+            <div class="col-lg-9 col-md-12 d-flex  flex-wrap  mt-50 mb-50">
 
-                <!---------------------------------- Main Content Area -------------------------------------->
-
-                <div class="col-lg-10 col-md-12 mt-50 mb-50" id="property_listing">
-
-                    <!-------------- Card 1 -------------->
-                    <!-- <div class="col-lg-4 col-sm-6 top-margin">
+                    <!-------------- Card 1 -------------->                    
+                    <div class="col-lg-4 col-sm-6 top-margin">
 						<div class="card">
-							<div class="image-container"> -->
+							<div class="image-container">
 
-                    <!------- carousel ------->
-                    <!-- <div id="Carousel-Card1" class="carousel slide" data-bs-ride="false">
+                                <!------- carousel ------->
+								<div id="Carousel-Card1" class="carousel slide" data-bs-ride="false">
                                     <div class="carousel-indicators">
                                         <button type="button" data-bs-target="#Carousel-Card1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                                         <button type="button" data-bs-target="#Carousel-Card1" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -530,16 +468,16 @@
 								</div>		
 							</div>
                         </div>
-                    </div> -->
+                    </div>
                     <!------------------------------------>
 
-                    <!-------------- Card 2 -------------->
-                    <!-- <div class="col-lg-4 col-sm-6 top-margin">
+                    <!-------------- Card 2 -------------->                    
+                    <div class="col-lg-4 col-sm-6 top-margin">
 						<div class="card">
-							<div class="image-container"> -->
+							<div class="image-container">
 
-                    <!------- carouse2 ------->
-                    <!-- <div id="Carousel-Card2" class="carousel slide" data-bs-ride="false">
+                                <!------- carouse2 ------->
+								<div id="Carousel-Card2" class="carousel slide" data-bs-ride="false">
                                     <div class="carousel-indicators">
                                         <button type="button" data-bs-target="#Carousel-Card2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                                         <button type="button" data-bs-target="#Carousel-Card2" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -604,16 +542,16 @@
 								</div>		
 							</div>
                         </div>
-                    </div> -->
+                    </div>
                     <!------------------------------------>
 
-                    <!-------------- Card 3 -------------->
-                    <!-- <div class="col-lg-4 col-sm-6 top-margin">
+                    <!-------------- Card 3 -------------->                    
+                    <div class="col-lg-4 col-sm-6 top-margin">
 						<div class="card">
-							<div class="image-container"> -->
+							<div class="image-container">
 
-                    <!------- carousel ------->
-                    <!-- <div id="Carousel-Card3" class="carousel slide" data-bs-ride="false">
+                                <!------- carousel ------->
+								<div id="Carousel-Card3" class="carousel slide" data-bs-ride="false">
                                     <div class="carousel-indicators">
                                         <button type="button" data-bs-target="#Carousel-Card3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                                         <button type="button" data-bs-target="#Carousel-Card3" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -690,16 +628,16 @@
 								</div>		
 							</div>
                         </div>
-                    </div> -->
+                    </div>
                     <!------------------------------------>
 
-                    <!-------------- Card 4 -------------->
-                    <!-- <div class="col-lg-4 col-sm-6 top-margin">
+                    <!-------------- Card 4 -------------->                    
+                    <div class="col-lg-4 col-sm-6 top-margin">
 						<div class="card">
-							<div class="image-container"> -->
+							<div class="image-container">
 
-                    <!------- carousel ------->
-                    <!-- <div id="Carousel-Card4" class="carousel slide" data-bs-ride="false">
+                                <!------- carousel ------->
+								<div id="Carousel-Card4" class="carousel slide" data-bs-ride="false">
                                     <div class="carousel-indicators">
                                         <button type="button" data-bs-target="#Carousel-Card4" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                                         <button type="button" data-bs-target="#Carousel-Card4" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -772,16 +710,16 @@
 								</div>		
 							</div>
                         </div>
-                    </div> -->
+                    </div>    
                     <!------------------------------------>
 
-                    <!-------------- Card 5 -------------->
-                    <!-- <div class="col-lg-4 col-sm-6 top-margin">
+                    <!-------------- Card 5 -------------->                    
+                    <div class="col-lg-4 col-sm-6 top-margin">
 						<div class="card">
-							<div class="image-container"> -->
+							<div class="image-container">
 
-                    <!------- carousel ------->
-                    <!-- <div id="Carousel-Card5" class="carousel slide" data-bs-ride="false">
+                                <!------- carousel ------->
+								<div id="Carousel-Card5" class="carousel slide" data-bs-ride="false">
                                     <div class="carousel-indicators">
                                         <button type="button" data-bs-target="#Carousel-Card5" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                                         <button type="button" data-bs-target="#Carousel-Card5" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -850,58 +788,34 @@
 								</div>		
 							</div>
                         </div>
-                    </div> -->
+                    </div>
                     <!------------------------------------>
 
-                </div>
-                <div class="col-lg-2 col-md-12 mt-50 mb-50">
-                    
-                    <button class="btn" type="button" >
-                    <span class="my-auto mx-auto d-flex rounded-pill shadow">
-                        <a class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill"
-                            role="button" data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> 
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    Filters
-                                </div>
-                                <div class="col-sm-4">
-                                    <svg
-                                xmlns="http://www.w3.org/2000/svg" width="16" height="23" fill="black"
-                                class="bi bi-sliders" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3h9.05zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8h2.05zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1h9.05z"/>
-                            </svg>
-                                </div>
-                            </div>
-                        </a>
-                    </span>
-                </button>
-                </div>
             </div>
         </div>
+    </div>
 
-    </main>
-    <!--Body Content starts-->
+</main>
+<!--Body Content starts-->
 
-    <!------------------------------------------------ Footer starts -------------------------------------------------->
+<!------------------------------------------------ Footer starts -------------------------------------------------->
 
-    <footer class="d-flex container flex-wrap justify-content-between align-items-center py-3 my-4 custom-footer">
-        <p class="col-md-4 mb-0 text-muted">TerraGate, Richardson, TX</p>
+<footer class="d-flex container flex-wrap justify-content-between align-items-center py-3 my-4 custom-footer">
+    <p class="col-md-4 mb-0 text-muted">TerraGate, Richardson, TX</p>
 
-        <a href="/"
-            class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-            <!-- <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg> -->
-            <img class="bi me-2" src="img\project-logo.svg" width="40" height="32" alt="Logo" />
-        </a>
+    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <!-- <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg> -->
+      <img class = "bi me-2" src="img\project-logo.svg" width="40" height="32" alt="Logo" />
+    </a>
 
-        <ul class="nav col-md-4 justify-content-end">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contact Us</a></li>
-        </ul>
-    </footer>
+    <ul class="nav col-md-4 justify-content-end">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contact Us</a></li>
+    </ul>
+</footer>
 
-    <!--Footer ends-->
+<!--Footer ends-->
 </body>
 
 <!----------------------------------------------------------------------------------------------------------------->
@@ -912,19 +826,19 @@
 
 <script type="text/javascript">
 
-    function decrementValue(e) {
+    function decrementValue(e){
         var value = document.getElementById(e).value;
         value--;
-        if (value >= 1) {
-            document.getElementById(e).value = value;
+        if(value>=1){
+            document.getElementById(e).value=value;
         }
     }
 
-    function incrementValue(e) {
+    function incrementValue(e){
         var value = document.getElementById(e).value;
         value++;
-        if (value <= 10) {
-            document.getElementById(e).value = value;
+        if(value<=10){
+            document.getElementById(e).value=value;
         }
     }
 

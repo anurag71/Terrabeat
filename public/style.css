@@ -1,0 +1,131 @@
+body{
+
+	background-color: #eee;
+	font-family: "Gelasio", serif;
+}
+
+.custom-navbar{
+    background-color: #d3d3d3;
+}
+
+.custom-footer{
+    background-color: #d3d3d3;
+}
+
+.ms-n5 {
+    margin-left: -40px;
+}
+
+.popover.bottom .arrow {
+   display: none;
+}
+
+.tooltip.arrow{
+   display: none;
+}
+
+icon-shape {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   vertical-align: middle;
+}
+
+.icon-sm {
+   width: 2rem;
+   height: 2rem;
+   
+}
+
+.btn-group{
+    white-space: normal;
+}
+
+
+.card{
+
+	background-color: #fff;
+	border:none;
+	border-radius: 10px;
+	width: 90%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+
+.thumbnail-image{
+	border-radius: 10px !important;
+	
+}
+
+.price{
+	font-size: 14px;
+	font-weight: bold;
+	color: red;
+}
+
+
+.rating-number{
+	font-size: 13px;
+	font-weight: bold;
+	color: green;
+
+}
+
+.bi-heart-fill:hover {
+	fill: #e33232;
+	
+  }
+
+.carousel{
+	interval: false;
+	display: block;
+	
+}
+
+.features{
+	font-size: 14px;
+	color: rgb(139, 154, 139);
+}
+
+.features p{
+	line-height: 0.8em;
+	height: 1.5em;
+}
+
+.property-title{
+	line-height: 1.5em;
+    height: 3em;       /* height is 2x line-height, so two lines will display */
+    overflow: hidden;  /* prevents extra lines from being visible */
+}
+
+.top-margin{
+    margin-top: 20px;
+}
+
+.bottom-margin{
+    margin-bottom: 20px;
+}
+
+a{
+    text-decoration: none; 
+}
+
+
+.btn-text{
+    font-size: 14px ;
+}
+
+
+.text-margin{
+    margin: 4px;
+}
+
+.navbar-labels{
+    font-size: 15px ;
+}
+
+.input-rad{
+	border-radius:50px ;
+}
