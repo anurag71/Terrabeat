@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import Properties from './properties';
+import Properties from './Properties';
 
 
     const App = () =>  {
