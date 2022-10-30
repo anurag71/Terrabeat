@@ -79,805 +79,649 @@
 <!----------------------------------------------------------------------------------------------------------------->
 
 <body>
+    <div id="root">
 
     <!------------------------------------------------ Header starts -------------------------------------------------->
 
-    <header class="sticky-lg-top">
-        <nav class="navbar navbar-expand-lg p-3 ps-5 pe-5 custom-navbar">
+        <!--Header rendered by react-->
+        
+        <!--Header Ends-->
+    
+        <!--------------------------------------------- Body Content starts ----------------------------------------------->
+    
+        <!-- <main>
             <div class="container-fluid">
-
-                <button class="btn navbar-brand" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><img
-                        src="img\project-logo.svg" alt="Logo" width="50" height="44" class="d-inline-block ">
-                    TerraGate</button>
-
-
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarText">
-                    <div class="row d-flex mx-auto my-auto col-md-5 p-2">
-                        <div class="mx-auto d-flex" id="search_bar">
-                            <!--Component inserted by REACT-->
-                        </div>
-                    </div>
-
-                    <ul class="navbar-nav flex-row-inverse">
-                        <li class="nav-item p-2 mx-auto my-auto">
-                            <a class="nav-link active" aria-current="page" href="#">Register as Host</a>
-                        </li>
-
-                        <li class="nav-item p-2 mx-auto my-auto">
-                            <button type="button" class="btn btn-secondary bg-light rounded-pill mx-auto my-auto"
-                                data-container="body" data-bs-toggle="popover" placement="bottom"
-                                data-bs-trigger="focus" data-bs-html="true" data-bs-content='
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">Sign in</li>
-                                        <li class="list-group-item">Sign up</li>
-                                    </ul>
-                               '>
-
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black"
-                                    class="bi bi-person-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                                </svg>
-
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div class="collapse multi-collapse border-top" id="multiCollapseExample1">
-            <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
-                <div class="container-fluid">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <div class="d-flex d-flex  ">
-                                <div class="p-2 col-sm-4 col-4 align-middle navbar-labels">
-                                    <span>Check In:</span>
-                                </div>
-                                <div class="p-2 col-sm-8 col-8 my-auto mx-auto">
-                                    <div class="input-group w-auto my-auto mx-auto">
-                                        <input class="form-control" id="from-date" name="from-date"
-                                            placeholder="MM/DD/YYY" type="text" />
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="nav-item">
-                            <div class="d-flex d-flex  ">
-                                <div class="p-2 col-sm-4 col-4 align-middle navbar-labels">
-                                    <span>Check Out:</span>
-                                </div>
-                                <div class="p-2 col-sm-8 col-8 my-auto mx-auto">
-                                    <div class="input-group w-auto my-auto mx-auto">
-                                        <input class="form-control" id="to-date" name="to-date" placeholder="MM/DD/YYY"
-                                            type="text" />
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="nav-item">
-                            <div class="d-flex d-flex  ">
-                                <div class="p-2 col-sm-4 col-4 align-middle navbar-labels">
-                                    <span>Guests:</span>
-                                </div>
-                                <div class="p-2 col-sm-8 col-8 my-auto mx-auto">
-                                    <div class="input-group w-auto my-auto mx-auto">
-                                        <input type="button" value="-" id="decrement" onclick='decrementValue("guests")'
-                                            class="button-minus border rounded-circle  icon-shape icon-sm mx-1 "
-                                            data-field="quantity">
-                                        <input type="number" id="guests" step="1" max="10" value="1" name="quantity"
-                                            class="quantity-field border-0 text-center w-25" style="border-radius:10px">
-                                        <input type="button" value="+" id="increment" onclick='incrementValue("guests")'
-                                            class="button-plus border rounded-circle icon-shape icon-sm "
-                                            data-field="quantity">
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="nav-item">
-                            <div class="d-flex d-flex  ">
-                                <div class="p-2 col-sm-4 col-4 align-middle navbar-labels">
-                                    <span>Bedroom:</span>
-                                </div>
-                                <div class="p-2 col-sm-8 col-8 my-auto mx-auto">
-                                    <div class="input-group w-auto my-auto mx-auto">
-                                        <input type="button" value="-" onclick='decrementValue("bedrooms")'
-                                            class="button-minus border rounded-circle  icon-shape icon-sm mx-1 "
-                                            data-field="quantity">
-                                        <input type="number" step="1" id="bedrooms" max="10" value="1" name="quantity"
-                                            class="quantity-field border-0 text-center w-25" style="border-radius:10px">
-                                        <input type="button" value="+" onclick='incrementValue("bedrooms")'
-                                            class="button-plus border rounded-circle icon-shape icon-sm lh-0"
-                                            data-field="quantity">
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="nav-item">
-                            <div class="d-flex d-flex  ">
-                                <div class="p-2 col-sm-4 col-4 align-middle navbar-labels">
-                                    <span>Bathroom:</span>
-                                </div>
-                                <div class="p-2 col-sm-8 col-8 my-auto mx-auto">
-                                    <div class="input-group w-auto my-auto mx-auto">
-                                        <input type="button" value="-" onclick='decrementValue("bathrooms")'
-                                            class="button-minus border rounded-circle  icon-shape icon-sm mx-1 lh-0"
-                                            data-field="quantity">
-                                        <input type="number" step="1" id="bathrooms" max="10" value="1" name="quantity"
-                                            class="quantity-field border-0 text-center w-25" style="border-radius:10px">
-                                        <input type="button" value="+" onclick='incrementValue("bathrooms")'
-                                            class="button-plus border rounded-circle icon-shape icon-sm lh-0"
-                                            data-field="quantity">
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-    </header>
-    <!--Header Ends-->
-
-    <!--------------------------------------------- Body Content starts ----------------------------------------------->
-
-    <main>
-        <div class="container-fluid">
-            <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasRightLabel">Filters</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div> 
-                <div class="offcanvas-body">
-                <div class="me-2">
-                        <div class="container p-1">
-                            <div class="accordion" id="accordionExample">
-
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                            aria-expanded="false" aria-controls="collapseOne">
-                                            Price
-                                        </button>
-                                    </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse"
-                                        aria-labelledby="headingOne" data-bs-parent="#FilterAccordion">
-                                        <div class="accordion-body">
-                                            <input type="text" id="range_03" name="example_name" value="" />
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasRightLabel">Filters</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div> 
+                    <div class="offcanvas-body">
+                    <div class="me-2">
+                            <div class="container p-1">
+                                <div class="accordion" id="accordionExample">
+    
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                aria-expanded="false" aria-controls="collapseOne">
+                                                Price
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse"
+                                            aria-labelledby="headingOne" data-bs-parent="#FilterAccordion">
+                                            <div class="accordion-body">
+                                                <input type="text" id="range_03" name="example_name" value="" />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                            aria-expanded="false" aria-controls="collapseTwo">
-                                            Ratings
-                                        </button>
-                                    </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse"
-                                        aria-labelledby="headingTwo" data-bs-parent="#FilterAccordion">
-                                        <div class="accordion-body pt-2 pb-2">
-                                            <div>
-                                                <div class="btn-group" role="group"
-                                                    aria-label="Rating Button Group">
-                                                    <input type="checkbox" class="btn-check p-1" id="btncheck1"
-                                                        autocomplete="off">
-                                                    <label class="btn btn-outline-secondary m-0 p-1 btn-text"
-                                                        for="btncheck1">5 Star</label>
-
-                                                    <input type="checkbox" class="btn-check p-1" id="btncheck2"
-                                                        autocomplete="off">
-                                                    <label class="btn btn-outline-secondary m-0 p-1 btn-text"
-                                                        for="btncheck2">4 Star</label>
-
-                                                    <input type="checkbox" class="btn-check p-1" id="btncheck3"
-                                                        autocomplete="off">
-                                                    <label class="btn btn-outline-secondary m-0 p-1 btn-text"
-                                                        for="btncheck3">3 Star</label>
-
-                                                    <input type="checkbox" class="btn-check p-1" id="btncheck4"
-                                                        autocomplete="off">
-                                                    <label class="btn btn-outline-secondary m-0 p-1 btn-text"
-                                                        for="btncheck4">2 Star</label>
-
-                                                    <input type="checkbox" class="btn-check p-1" id="btncheck5"
-                                                        autocomplete="off">
-                                                    <label class="btn btn-outline-secondary m-0 p-1 btn-text"
-                                                        for="btncheck5">1 Star</label>
+    
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingTwo">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                Ratings
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                            aria-labelledby="headingTwo" data-bs-parent="#FilterAccordion">
+                                            <div class="accordion-body pt-2 pb-2">
+                                                <div>
+                                                    <div class="btn-group" role="group"
+                                                        aria-label="Rating Button Group">
+                                                        <input type="checkbox" class="btn-check p-1" id="btncheck1"
+                                                            autocomplete="off">
+                                                        <label class="btn btn-outline-secondary m-0 p-1 btn-text"
+                                                            for="btncheck1">5 Star</label>
+    
+                                                        <input type="checkbox" class="btn-check p-1" id="btncheck2"
+                                                            autocomplete="off">
+                                                        <label class="btn btn-outline-secondary m-0 p-1 btn-text"
+                                                            for="btncheck2">4 Star</label>
+    
+                                                        <input type="checkbox" class="btn-check p-1" id="btncheck3"
+                                                            autocomplete="off">
+                                                        <label class="btn btn-outline-secondary m-0 p-1 btn-text"
+                                                            for="btncheck3">3 Star</label>
+    
+                                                        <input type="checkbox" class="btn-check p-1" id="btncheck4"
+                                                            autocomplete="off">
+                                                        <label class="btn btn-outline-secondary m-0 p-1 btn-text"
+                                                            for="btncheck4">2 Star</label>
+    
+                                                        <input type="checkbox" class="btn-check p-1" id="btncheck5"
+                                                            autocomplete="off">
+                                                        <label class="btn btn-outline-secondary m-0 p-1 btn-text"
+                                                            for="btncheck5">1 Star</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingThree">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                aria-expanded="false" aria-controls="collapseThree">
+                                                Distance
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse"
+                                            aria-labelledby="headingThree" data-bs-parent="#FilterAccordion">
+                                            <div class="accordion-body">
+                                                <input type="text" id="distance-range-slider"
+                                                    name="distance-range-slider" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingFour">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                                aria-expanded="false" aria-controls="collapseFour">
+                                                Place Type
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFour" class="accordion-collapse collapse"
+                                            aria-labelledby="headingFour" data-bs-parent="#FilterAccordion">
+                                            <div class="accordion-body">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="private-room-check">
+                                                    <label class="form-check-label" for="private-room-check">
+                                                        Private Room
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="entire-house-check">
+                                                    <label class="form-check-label" for="entire-house-check">
+                                                        Entire House
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="hotel-room-check">
+                                                    <label class="form-check-label" for="hotel-room-check">
+                                                        Hotel Room
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="shared-room-check">
+                                                    <label class="form-check-label" for="shared-room-check">
+                                                        Shared Room
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingFive">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                                aria-expanded="false" aria-controls="collapseFive">
+                                                Amenities
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFive" class="accordion-collapse collapse"
+                                            aria-labelledby="headingFive" data-bs-parent="#FilterAccordion">
+                                            <div class="accordion-body">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="wifi-amenity-check">
+                                                    <label class="form-check-label" for="wifi-amenity-check">
+                                                        Wi-Fi
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="television-amenity-check">
+                                                    <label class="form-check-label" for="television-house-check">
+                                                        Television
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="refrigerator-amenity-check">
+                                                    <label class="form-check-label" for="refrigerator-amenity-check">
+                                                        Refrigerator
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="washer-amenity-check">
+                                                    <label class="form-check-label" for="washer-room-check">
+                                                        Washer
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="dryer-amenity-check">
+                                                    <label class="form-check-label" for="dryer-amenity-check">
+                                                        Dryer
+                                                    </label>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                            aria-expanded="false" aria-controls="collapseThree">
-                                            Distance
-                                        </button>
-                                    </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse"
-                                        aria-labelledby="headingThree" data-bs-parent="#FilterAccordion">
-                                        <div class="accordion-body">
-                                            <input type="text" id="distance-range-slider"
-                                                name="distance-range-slider" value="" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingFour">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseFour"
-                                            aria-expanded="false" aria-controls="collapseFour">
-                                            Place Type
-                                        </button>
-                                    </h2>
-                                    <div id="collapseFour" class="accordion-collapse collapse"
-                                        aria-labelledby="headingFour" data-bs-parent="#FilterAccordion">
-                                        <div class="accordion-body">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="private-room-check">
-                                                <label class="form-check-label" for="private-room-check">
-                                                    Private Room
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="entire-house-check">
-                                                <label class="form-check-label" for="entire-house-check">
-                                                    Entire House
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="hotel-room-check">
-                                                <label class="form-check-label" for="hotel-room-check">
-                                                    Hotel Room
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="shared-room-check">
-                                                <label class="form-check-label" for="shared-room-check">
-                                                    Shared Room
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingFive">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseFive"
-                                            aria-expanded="false" aria-controls="collapseFive">
-                                            Amenities
-                                        </button>
-                                    </h2>
-                                    <div id="collapseFive" class="accordion-collapse collapse"
-                                        aria-labelledby="headingFive" data-bs-parent="#FilterAccordion">
-                                        <div class="accordion-body">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="wifi-amenity-check">
-                                                <label class="form-check-label" for="wifi-amenity-check">
-                                                    Wi-Fi
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="television-amenity-check">
-                                                <label class="form-check-label" for="television-house-check">
-                                                    Television
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="refrigerator-amenity-check">
-                                                <label class="form-check-label" for="refrigerator-amenity-check">
-                                                    Refrigerator
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="washer-amenity-check">
-                                                <label class="form-check-label" for="washer-room-check">
-                                                    Washer
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="dryer-amenity-check">
-                                                <label class="form-check-label" for="dryer-amenity-check">
-                                                    Dryer
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
-                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="row">
-
-                <!-------------------------------------- Left Menu ------------------------------------------>
-
-                
-
-                <!---------------------------------- Main Content Area -------------------------------------->
-
-                <div class="col-lg-10 col-md-12 mt-50 mb-50" id="property_listing">
-
-                    <!-------------- Card 1 -------------->
-                    <!-- <div class="col-lg-4 col-sm-6 top-margin">
-						<div class="card">
-							<div class="image-container"> -->
-
-                    <!------- carousel ------->
-                    <!-- <div id="Carousel-Card1" class="carousel slide" data-bs-ride="false">
-                                    <div class="carousel-indicators">
-                                        <button type="button" data-bs-target="#Carousel-Card1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                        <button type="button" data-bs-target="#Carousel-Card1" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                        <button type="button" data-bs-target="#Carousel-Card1" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                        <button type="button" data-bs-target="#Carousel-Card1" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                                        <button type="button" data-bs-target="#Carousel-Card1" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                                        <button type="button" data-bs-target="#Carousel-Card1" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                                    </div>
-                      
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img src="img\Properties\1\1.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="img\Properties\1\2.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="img\Properties\1\3.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="img\Properties\1\4.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="img\Properties\1\5.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="img\Properties\1\6.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
-                                        </div>
-                                    </div>
-
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#Carousel-Card1" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#Carousel-Card1" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
-                                    </button>
-								</div>
-
-								<div class="p-2">
-									<div class="d-flex justify-content-between align-items-center">
-										<h6 class="property-title">Hot Springs, Arkansas</h6>
-
-										<div class="d-flex flex-column mb-2">
-												<span class="price">$109.99/Night</span>
-										</div>
-									</div>
-
-									<div class="d-flex justify-content-between align-items-center pt-1">
-                                        <div class="features">
-                                            <p>3 beds (1 full, 1 sofa bed, 1 queen)</p>
-                                            <p>Free cancellation</p>
-                                            <p>-</p>
-                                        </div>
-									</div>
-
-									<div class="d-flex justify-content-between align-items-right" style="margin-top: 12px;" >
-                                        <div>											
-											<span class="rating-number">Score: 4.8</span>
-										</div>
-										<span> 
-											<a href="#">
-												<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="black" class="bi bi-heart-fill" viewBox="0 0 16 16">
-													<path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-												</svg>
-											</a>
-										</span>
-									</div>										
-								</div>		
-							</div>
-                        </div>
-                    </div> -->
-                    <!------------------------------------>
-
-                    <!-------------- Card 2 -------------->
-                    <!-- <div class="col-lg-4 col-sm-6 top-margin">
-						<div class="card">
-							<div class="image-container"> -->
-
-                    <!------- carouse2 ------->
-                    <!-- <div id="Carousel-Card2" class="carousel slide" data-bs-ride="false">
-                                    <div class="carousel-indicators">
-                                        <button type="button" data-bs-target="#Carousel-Card2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                        <button type="button" data-bs-target="#Carousel-Card2" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                        <button type="button" data-bs-target="#Carousel-Card2" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                        <button type="button" data-bs-target="#Carousel-Card2" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                                    </div>
-                      
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img src="img\Properties\2\1.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="img\Properties\2\2.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="img\Properties\2\3.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="img\Properties\2\4.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
-                                        </div>
-                                    </div>
-
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#Carousel-Card2" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#Carousel-Card2" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
-                                    </button>
-								</div>
-
-								<div class="p-2">
-									<div class="d-flex justify-content-between align-items-center">
-										<h6 class="property-title">Alexis Hotel & Banquets Dallas Park</h6>
-
-										<div class="d-flex flex-column mb-2">
-												<span class="price">$90/Night</span>
-										</div>
-									</div>
-
-									<div class="d-flex justify-content-between align-items-center pt-1">
-                                        <div class="features">
-                                            <p>1 Full bed</p>
-                                            <p>Free cancellation</p>
-                                            <p>Breakfast included</p>
-                                        </div>
-									</div>
-
-									<div class="d-flex justify-content-between align-items-right" style="margin-top: 12px;" >
-                                        <div>
-											<span class="rating-number">Score: 5.0</span>
-										</div>
-										<span> 
-											<a href="#">
-												<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="black" class="bi bi-heart-fill" viewBox="0 0 16 16">
-													<path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-												</svg>
-											</a>
-										</span>
-									</div>										
-								</div>		
-							</div>
-                        </div>
-                    </div> -->
-                    <!------------------------------------>
-
-                    <!-------------- Card 3 -------------->
-                    <!-- <div class="col-lg-4 col-sm-6 top-margin">
-						<div class="card">
-							<div class="image-container"> -->
-
-                    <!------- carousel ------->
-                    <!-- <div id="Carousel-Card3" class="carousel slide" data-bs-ride="false">
-                                    <div class="carousel-indicators">
-                                        <button type="button" data-bs-target="#Carousel-Card3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                        <button type="button" data-bs-target="#Carousel-Card3" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                        <button type="button" data-bs-target="#Carousel-Card3" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                        <button type="button" data-bs-target="#Carousel-Card3" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                                        <button type="button" data-bs-target="#Carousel-Card3" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                                        <button type="button" data-bs-target="#Carousel-Card3" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                                        <button type="button" data-bs-target="#Carousel-Card3" data-bs-slide-to="6" aria-label="Slide 7"></button>
-                                    </div>
-                      
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img src="img\Properties\3\2.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="img\Properties\3\1.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="img\Properties\3\3.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="img\Properties\3\4.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="img\Properties\3\5.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="img\Properties\3\6.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="img\Properties\3\7.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
-                                        </div>
-                                    </div>
-
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#Carousel-Card3" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#Carousel-Card3" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
-                                    </button>
-								</div>
-
-								<div class="p-2">
-									<div class="d-flex justify-content-between align-items-center">
-										<h6 class="property-title">Candlewood Suites Dallas Market Center-Love Field</h6>
-
-										<div class="d-flex flex-column mb-2">
-												<span class="price">$82/Night</span>
-										</div>
-									</div>
-
-									<div class="d-flex justify-content-between align-items-center pt-1">
-                                        <div class="features">
-                                            <p>2 beds (1 full, 1 twin) </p>
-                                            <p>Free cancellation </p>
-                                            <p></p>
-                                        </div>
-									</div>
-
-									<div class="d-flex justify-content-between align-items-right" style="margin-top: 12px;" >
-                                        <div>
-											<span class="rating-number">Score: 4.5</span>
-										</div>
-										<span> 
-											<a href="#">
-												<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="black" class="bi bi-heart-fill" viewBox="0 0 16 16">
-													<path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-												</svg>
-											</a>
-										</span>
-									</div>										
-								</div>		
-							</div>
-                        </div>
-                    </div> -->
-                    <!------------------------------------>
-
-                    <!-------------- Card 4 -------------->
-                    <!-- <div class="col-lg-4 col-sm-6 top-margin">
-						<div class="card">
-							<div class="image-container"> -->
-
-                    <!------- carousel ------->
-                    <!-- <div id="Carousel-Card4" class="carousel slide" data-bs-ride="false">
-                                    <div class="carousel-indicators">
-                                        <button type="button" data-bs-target="#Carousel-Card4" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                        <button type="button" data-bs-target="#Carousel-Card4" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                        <button type="button" data-bs-target="#Carousel-Card4" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                        <button type="button" data-bs-target="#Carousel-Card4" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                                        <button type="button" data-bs-target="#Carousel-Card4" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                                        <button type="button" data-bs-target="#Carousel-Card4" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                                    </div>
-                      
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img src="img\Properties\4\1.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="img\Properties\4\2.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="img\Properties\4\3.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="img\Properties\4\4.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="img\Properties\4\5.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="img\Properties\4\6.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
-                                        </div>
-                                    </div>
-
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#Carousel-Card4" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#Carousel-Card4" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
-                                    </button>
-								</div>
-
-								<div class="p-2">
-									<div class="d-flex justify-content-between align-items-center">
-										<h6 class="property-title">Dallas 1 BR near Downtown</h6>
-
-										<div class="d-flex flex-column mb-2">
-												<span class="price">$75/Night</span>
-										</div>
-									</div>
-
-									<div class="d-flex justify-content-between align-items-center pt-1">
-                                        <div class="features">
-                                            <p>2 beds (queen)</p>
-                                            <p>Breakfast included</p>
-                                            <p></p>
-                                        </div>
-									</div>
-
-									<div class="d-flex justify-content-between align-items-right" style="margin-top: 12px;" >
-                                        <div>
-											<span class="rating-number">Score: 4.3</span>
-										</div>
-										<span> 
-											<a href="#">
-												<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="black" class="bi bi-heart-fill" viewBox="0 0 16 16">
-													<path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-												</svg>
-											</a>
-										</span>
-									</div>										
-								</div>		
-							</div>
-                        </div>
-                    </div> -->
-                    <!------------------------------------>
-
-                    <!-------------- Card 5 -------------->
-                    <!-- <div class="col-lg-4 col-sm-6 top-margin">
-						<div class="card">
-							<div class="image-container"> -->
-
-                    <!------- carousel ------->
-                    <!-- <div id="Carousel-Card5" class="carousel slide" data-bs-ride="false">
-                                    <div class="carousel-indicators">
-                                        <button type="button" data-bs-target="#Carousel-Card5" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                        <button type="button" data-bs-target="#Carousel-Card5" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                        <button type="button" data-bs-target="#Carousel-Card5" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                        <button type="button" data-bs-target="#Carousel-Card5" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                                        <button type="button" data-bs-target="#Carousel-Card5" data-bs-slide-to="4" aria-label="Slide 5"></button>                                       
-                                    </div>
-                      
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img src="img\Properties\5\1.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="img\Properties\5\2.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="img\Properties\5\4.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="img\Properties\5\5.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="img\Properties\5\6.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
-                                        </div>
-                                    </div>
-
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#Carousel-Card5" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#Carousel-Card5" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
-                                    </button>
-								</div>
-
-								<div class="p-2">
-									<div class="d-flex justify-content-between align-items-center">
-										<h6 class="property-title">East Side Beehive</h6>
-
-										<div class="d-flex flex-column mb-2">
-												<span class="price">$120/Night</span>
-										</div>
-									</div>
-
-									<div class="d-flex justify-content-between align-items-center pt-1">
-                                        <div class="features">
-                                            <p>1 beds (1 full)</p>
-                                            <p>Free cancellation</p>
-                                            <p></p>  
-                                        </div>
-									</div>
-
-									<div class="d-flex justify-content-between align-items-right" style="margin-top: 12px;" >
-                                        <div>
-											<span class="rating-number">Score: 4.9</span>
-										</div>
-										<span> 
-											<a href="#" >
-												<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="black" class="bi bi-heart-fill" viewBox="0 0 16 16">
-													<path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-												</svg>
-											</a>
-										</span>
-									</div>										
-								</div>		
-							</div>
-                        </div>
-                    </div> -->
-                    <!------------------------------------>
-
-                </div>
-                <div class="col-lg-2 col-md-12 mt-50 mb-50">
+                <div class="row"> -->
+    
+                    <!-------------------------------------- Left Menu ------------------------------------------>
+    
                     
-                    <button class="btn" type="button" >
-                    <span class="my-auto mx-auto d-flex rounded-pill shadow">
-                        <a class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill"
-                            role="button" data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> 
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    Filters
-                                </div>
-                                <div class="col-sm-4">
-                                    <svg
-                                xmlns="http://www.w3.org/2000/svg" width="16" height="23" fill="black"
-                                class="bi bi-sliders" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3h9.05zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8h2.05zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1h9.05z"/>
-                            </svg>
+    
+                    <!---------------------------------- Main Content Area -------------------------------------->
+    
+                    <!-- <div class="col-lg-10 col-md-12 mt-50 mb-50" id="property_listing"> -->
+    
+                        <!-------------- Card 1 -------------->
+                        <!-- <div class="col-lg-4 col-sm-6 top-margin">
+                            <div class="card">
+                                <div class="image-container"> -->
+    
+                        <!------- carousel ------->
+                        <!-- <div id="Carousel-Card1" class="carousel slide" data-bs-ride="false">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#Carousel-Card1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#Carousel-Card1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#Carousel-Card1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                            <button type="button" data-bs-target="#Carousel-Card1" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                            <button type="button" data-bs-target="#Carousel-Card1" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                            <button type="button" data-bs-target="#Carousel-Card1" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                        </div>
+                          
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="img\Properties\1\1.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="img\Properties\1\2.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="img\Properties\1\3.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="img\Properties\1\4.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="img\Properties\1\5.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="img\Properties\1\6.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
+                                            </div>
+                                        </div>
+    
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#Carousel-Card1" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#Carousel-Card1" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+    
+                                    <div class="p-2">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h6 class="property-title">Hot Springs, Arkansas</h6>
+    
+                                            <div class="d-flex flex-column mb-2">
+                                                    <span class="price">$109.99/Night</span>
+                                            </div>
+                                        </div>
+    
+                                        <div class="d-flex justify-content-between align-items-center pt-1">
+                                            <div class="features">
+                                                <p>3 beds (1 full, 1 sofa bed, 1 queen)</p>
+                                                <p>Free cancellation</p>
+                                                <p>-</p>
+                                            </div>
+                                        </div>
+    
+                                        <div class="d-flex justify-content-between align-items-right" style="margin-top: 12px;" >
+                                            <div>											
+                                                <span class="rating-number">Score: 4.8</span>
+                                            </div>
+                                            <span> 
+                                                <a href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="black" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                                    </svg>
+                                                </a>
+                                            </span>
+                                        </div>										
+                                    </div>		
                                 </div>
                             </div>
-                        </a>
-                    </span>
-                </button>
+                        </div> -->
+                        <!------------------------------------>
+    
+                        <!-------------- Card 2 -------------->
+                        <!-- <div class="col-lg-4 col-sm-6 top-margin">
+                            <div class="card">
+                                <div class="image-container"> -->
+    
+                        <!------- carouse2 ------->
+                        <!-- <div id="Carousel-Card2" class="carousel slide" data-bs-ride="false">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#Carousel-Card2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#Carousel-Card2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#Carousel-Card2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                            <button type="button" data-bs-target="#Carousel-Card2" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                        </div>
+                          
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="img\Properties\2\1.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="img\Properties\2\2.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="img\Properties\2\3.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="img\Properties\2\4.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
+                                            </div>
+                                        </div>
+    
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#Carousel-Card2" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#Carousel-Card2" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+    
+                                    <div class="p-2">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h6 class="property-title">Alexis Hotel & Banquets Dallas Park</h6>
+    
+                                            <div class="d-flex flex-column mb-2">
+                                                    <span class="price">$90/Night</span>
+                                            </div>
+                                        </div>
+    
+                                        <div class="d-flex justify-content-between align-items-center pt-1">
+                                            <div class="features">
+                                                <p>1 Full bed</p>
+                                                <p>Free cancellation</p>
+                                                <p>Breakfast included</p>
+                                            </div>
+                                        </div>
+    
+                                        <div class="d-flex justify-content-between align-items-right" style="margin-top: 12px;" >
+                                            <div>
+                                                <span class="rating-number">Score: 5.0</span>
+                                            </div>
+                                            <span> 
+                                                <a href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="black" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                                    </svg>
+                                                </a>
+                                            </span>
+                                        </div>										
+                                    </div>		
+                                </div>
+                            </div>
+                        </div> -->
+                        <!------------------------------------>
+    
+                        <!-------------- Card 3 -------------->
+                        <!-- <div class="col-lg-4 col-sm-6 top-margin">
+                            <div class="card">
+                                <div class="image-container"> -->
+    
+                        <!------- carousel ------->
+                        <!-- <div id="Carousel-Card3" class="carousel slide" data-bs-ride="false">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#Carousel-Card3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#Carousel-Card3" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#Carousel-Card3" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                            <button type="button" data-bs-target="#Carousel-Card3" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                            <button type="button" data-bs-target="#Carousel-Card3" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                            <button type="button" data-bs-target="#Carousel-Card3" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                            <button type="button" data-bs-target="#Carousel-Card3" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                                        </div>
+                          
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="img\Properties\3\2.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="img\Properties\3\1.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="img\Properties\3\3.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="img\Properties\3\4.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="img\Properties\3\5.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="img\Properties\3\6.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="img\Properties\3\7.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
+                                            </div>
+                                        </div>
+    
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#Carousel-Card3" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#Carousel-Card3" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+    
+                                    <div class="p-2">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h6 class="property-title">Candlewood Suites Dallas Market Center-Love Field</h6>
+    
+                                            <div class="d-flex flex-column mb-2">
+                                                    <span class="price">$82/Night</span>
+                                            </div>
+                                        </div>
+    
+                                        <div class="d-flex justify-content-between align-items-center pt-1">
+                                            <div class="features">
+                                                <p>2 beds (1 full, 1 twin) </p>
+                                                <p>Free cancellation </p>
+                                                <p></p>
+                                            </div>
+                                        </div>
+    
+                                        <div class="d-flex justify-content-between align-items-right" style="margin-top: 12px;" >
+                                            <div>
+                                                <span class="rating-number">Score: 4.5</span>
+                                            </div>
+                                            <span> 
+                                                <a href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="black" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                                    </svg>
+                                                </a>
+                                            </span>
+                                        </div>										
+                                    </div>		
+                                </div>
+                            </div>
+                        </div> -->
+                        <!------------------------------------>
+    
+                        <!-------------- Card 4 -------------->
+                        <!-- <div class="col-lg-4 col-sm-6 top-margin">
+                            <div class="card">
+                                <div class="image-container"> -->
+    
+                        <!------- carousel ------->
+                        <!-- <div id="Carousel-Card4" class="carousel slide" data-bs-ride="false">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#Carousel-Card4" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#Carousel-Card4" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#Carousel-Card4" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                            <button type="button" data-bs-target="#Carousel-Card4" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                            <button type="button" data-bs-target="#Carousel-Card4" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                            <button type="button" data-bs-target="#Carousel-Card4" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                        </div>
+                          
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="img\Properties\4\1.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="img\Properties\4\2.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="img\Properties\4\3.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="img\Properties\4\4.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="img\Properties\4\5.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="img\Properties\4\6.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
+                                            </div>
+                                        </div>
+    
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#Carousel-Card4" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#Carousel-Card4" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+    
+                                    <div class="p-2">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h6 class="property-title">Dallas 1 BR near Downtown</h6>
+    
+                                            <div class="d-flex flex-column mb-2">
+                                                    <span class="price">$75/Night</span>
+                                            </div>
+                                        </div>
+    
+                                        <div class="d-flex justify-content-between align-items-center pt-1">
+                                            <div class="features">
+                                                <p>2 beds (queen)</p>
+                                                <p>Breakfast included</p>
+                                                <p></p>
+                                            </div>
+                                        </div>
+    
+                                        <div class="d-flex justify-content-between align-items-right" style="margin-top: 12px;" >
+                                            <div>
+                                                <span class="rating-number">Score: 4.3</span>
+                                            </div>
+                                            <span> 
+                                                <a href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="black" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                                    </svg>
+                                                </a>
+                                            </span>
+                                        </div>										
+                                    </div>		
+                                </div>
+                            </div>
+                        </div> -->
+                        <!------------------------------------>
+    
+                        <!-------------- Card 5 -------------->
+                        <!-- <div class="col-lg-4 col-sm-6 top-margin">
+                            <div class="card">
+                                <div class="image-container"> -->
+    
+                        <!------- carousel ------->
+                        <!-- <div id="Carousel-Card5" class="carousel slide" data-bs-ride="false">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#Carousel-Card5" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#Carousel-Card5" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#Carousel-Card5" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                            <button type="button" data-bs-target="#Carousel-Card5" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                            <button type="button" data-bs-target="#Carousel-Card5" data-bs-slide-to="4" aria-label="Slide 5"></button>                                       
+                                        </div>
+                          
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="img\Properties\5\1.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="img\Properties\5\2.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="img\Properties\5\4.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="img\Properties\5\5.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="img\Properties\5\6.jpg" class="d-block w-100 img-fluid rounded thumbnail-image" alt="...">
+                                            </div>
+                                        </div>
+    
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#Carousel-Card5" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#Carousel-Card5" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+    
+                                    <div class="p-2">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h6 class="property-title">East Side Beehive</h6>
+    
+                                            <div class="d-flex flex-column mb-2">
+                                                    <span class="price">$120/Night</span>
+                                            </div>
+                                        </div>
+    
+                                        <div class="d-flex justify-content-between align-items-center pt-1">
+                                            <div class="features">
+                                                <p>1 beds (1 full)</p>
+                                                <p>Free cancellation</p>
+                                                <p></p>  
+                                            </div>
+                                        </div>
+    
+                                        <div class="d-flex justify-content-between align-items-right" style="margin-top: 12px;" >
+                                            <div>
+                                                <span class="rating-number">Score: 4.9</span>
+                                            </div>
+                                            <span> 
+                                                <a href="#" >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="black" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                                    </svg>
+                                                </a>
+                                            </span>
+                                        </div>										
+                                    </div>		
+                                </div>
+                            </div>
+                        </div> -->
+                        <!------------------------------------>
+    
+                    <!-- </div>
+                    <div class="col-lg-2 col-md-12 mt-50 mb-50">
+                        
+                        <button class="btn" type="button" >
+                        <span class="my-auto mx-auto d-flex rounded-pill shadow">
+                            <a class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill"
+                                role="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> 
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        Filters
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="23" fill="black"
+                                    class="bi bi-sliders" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3h9.05zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8h2.05zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1h9.05z"/>
+                                </svg>
+                                    </div>
+                                </div>
+                            </a>
+                        </span>
+                    </button>
+                    </div>
                 </div>
             </div>
-        </div>
-
-    </main>
-    <!--Body Content starts-->
-
-    <!------------------------------------------------ Footer starts -------------------------------------------------->
-
-    <footer class="d-flex container flex-wrap justify-content-between align-items-center py-3 my-4 custom-footer">
-        <p class="col-md-4 mb-0 text-muted">TerraGate, Richardson, TX</p>
-
-        <a href="/"
-            class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-            <!-- <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg> -->
-            <img class="bi me-2" src="img\project-logo.svg" width="40" height="32" alt="Logo" />
-        </a>
-
-        <ul class="nav col-md-4 justify-content-end">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contact Us</a></li>
-        </ul>
-    </footer>
+    
+        </main> -->
+        <!--Body Content starts-->
+    
+        <!------------------------------------------------ Footer starts -------------------------------------------------->
+    
 
     <!--Footer ends-->
+</div>
 </body>
 
 <!----------------------------------------------------------------------------------------------------------------->

@@ -15,15 +15,15 @@ const Search = (props) => {
   //     ))}
   //   </div>
   // )
-  return <SearchBar/>;
+  return <SearchBar 
+  filterText={props.filterText}
+  onFilterTextChange={props.setFilterText}/>;
 };
 
 
 function SearchBar({
-  filterText, 
-  isAvailable,
-  onFilterTextChange,
-  onIsAvailableChange
+  filterText,
+  onFilterTextChange
 }) {
   return (
     // <form>
@@ -47,9 +47,11 @@ function SearchBar({
     //     Only show available titles
     //   </label>
     // </form>
-    <div className="input-group d-flex" id="search_bar">
-                                <input className="form-control border-end-0 border rounded-pill shadow" type="search"
-                                    placeholder="Find your next dream stay" id="example-search-input"/>
+    <div className="input-group d-flex" id="search_bar" key={"search_input"}>
+                                <input className="form-control border-end-0 border rounded-pill shadow" type="search" key="search_text"
+                                    placeholder="Find your next dream stay" value={filterText} id="example-search-input" onChange={
+                                            (e) => onFilterTextChange(e.target.value)
+                                          }/>
                                 <span className="input-group-append my-auto mx-auto d-flex">
                                     <button
                                         className="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill ms-n5"

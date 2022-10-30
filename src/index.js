@@ -2,20 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import Search from './Search'
 
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('property_listing'));
-const temp = ReactDOM.createRoot(document.getElementById('search_bar'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
-);
-temp.render(
-  <React.StrictMode>
-    <Search/>
   </React.StrictMode>
 );
 
