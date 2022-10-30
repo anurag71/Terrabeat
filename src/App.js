@@ -1,7 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import Properties from './Properties';
-import ReactDOM from 'react-dom/client';
-import Search from './Search';
 import Header from './Header';
 import Footer from './Footer';
 import Main from './Main';

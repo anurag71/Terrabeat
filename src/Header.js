@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Search from "./Search";
 
 const Header = (props) => {
+
+    const [numGuests,setNumGuests] = useState(1);
+    const [numBedrooms,setNumBedrooms] = useState(1);
+    const [numBathrooms,setNumBathrooms] = useState(1);
+
     return (
         <header className="sticky-lg-top">
             <nav className="navbar navbar-expand-lg p-3 ps-5 pe-5 custom-navbar">
@@ -37,9 +42,9 @@ const Header = (props) => {
                                 <button type="button" className="btn btn-secondary bg-light rounded-pill mx-auto my-auto"
                                     data-container="body" data-bs-toggle="popover" placement="bottom"
                                     data-bs-trigger="focus" data-bs-html="true" data-bs-content='
-                                        <ul className="list-group list-group-flush">
-                                            <li className="list-group-item">Sign in</li>
-                                            <li className="list-group-item">Sign up</li>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">Sign in</li>
+                                            <li class="list-group-item">Sign up</li>
                                         </ul>
                                    '>
     
@@ -67,7 +72,7 @@ const Header = (props) => {
                                     <div className="p-2 col-sm-8 col-8 my-auto mx-auto">
                                         <div className="input-group w-auto my-auto mx-auto">
                                             <input className="form-control" id="from-date" name="from-date"
-                                                placeholder="MM/DD/YYY" type="text" />
+                                                placeholder="MM/DD/YYYY" type="date" />
                                         </div>
                                     </div>
                                 </div>
@@ -80,8 +85,8 @@ const Header = (props) => {
                                     </div>
                                     <div className="p-2 col-sm-8 col-8 my-auto mx-auto">
                                         <div className="input-group w-auto my-auto mx-auto">
-                                            <input className="form-control" id="to-date" name="to-date" placeholder="MM/DD/YYY"
-                                                type="text" />
+                                            <input className="form-control" id="to-date" name="to-date" placeholder="MM/DD/YYYY"
+                                                type="date" />
                                         </div>
                                     </div>
                                 </div>
@@ -94,12 +99,12 @@ const Header = (props) => {
                                     </div>
                                     <div className="p-2 col-sm-8 col-8 my-auto mx-auto">
                                         <div className="input-group w-auto my-auto mx-auto">
-                                            <input type="button" value="-" id="decrement" onclick='decrementValue("guests")'
+                                            <input type="button" value="-" id="decrement" onClick={() => numGuests-1>0 ? setNumGuests(numGuests - 1) : setNumGuests(numGuests)}
                                                 className="button-minus border rounded-circle  icon-shape icon-sm mx-1 "
                                                 data-field="quantity"/>
-                                            <input type="number" id="guests" step="1" max="10" value="1" name="quantity"
+                                            <input type="number" id="guests" step="1" max="10" value={numGuests} name="quantity"
                                                 className="quantity-field border-0 text-center w-25" style={{borderRadius: '10px'}}/>
-                                            <input type="button" value="+" id="increment" onclick='incrementValue("guests")'
+                                            <input type="button" value="+" id="increment" onClick={() => setNumGuests(numGuests + 1)}
                                                 className="button-plus border rounded-circle icon-shape icon-sm "
                                                 data-field="quantity"/>
                                         </div>
@@ -114,12 +119,12 @@ const Header = (props) => {
                                     </div>
                                     <div className="p-2 col-sm-8 col-8 my-auto mx-auto">
                                         <div className="input-group w-auto my-auto mx-auto">
-                                            <input type="button" value="-" onclick='decrementValue("bedrooms")'
+                                            <input type="button" value="-" onClick={() => numBedrooms-1>0 ? setNumBedrooms(numBedrooms - 1) : setNumBedrooms(numBedrooms)}
                                                 className="button-minus border rounded-circle  icon-shape icon-sm mx-1 "
                                                 data-field="quantity"/>
-                                            <input type="number" step="1" id="bedrooms" max="10" value="1" name="quantity"
+                                            <input type="number" step="1" id="bedrooms" max="10" value={numBedrooms} name="quantity"
                                                 className="quantity-field border-0 text-center w-25" style={{borderRadius: '10px'}}/>
-                                            <input type="button" value="+" onclick='incrementValue("bedrooms")'
+                                            <input type="button" value="+" onClick={() => setNumBedrooms(numBedrooms + 1)}
                                                 className="button-plus border rounded-circle icon-shape icon-sm lh-0"
                                                 data-field="quantity"/>
                                         </div>
@@ -134,12 +139,12 @@ const Header = (props) => {
                                     </div>
                                     <div className="p-2 col-sm-8 col-8 my-auto mx-auto">
                                         <div className="input-group w-auto my-auto mx-auto">
-                                            <input type="button" value="-" onClick='decrementValue("bathrooms")'
+                                            <input type="button" value="-" onClick={() => numBathrooms-1>0 ? setNumBathrooms(numBathrooms - 1) : setNumBathrooms(numBathrooms)}
                                                 className="button-minus border rounded-circle  icon-shape icon-sm mx-1 lh-0"
                                                 data-field="quantity"/>
-                                            <input type="number" step="1" id="bathrooms" max="10" value="1" name="quantity"
+                                            <input type="number" step="1" id="bathrooms" max="10" value={numBathrooms} name="quantity"
                                                 className="quantity-field border-0 text-center w-25" style={{borderRadius: '10px'}}/>
-                                            <input type="button" value="+" onClick='incrementValue("bathrooms")'
+                                            <input type="button" value="+" onClick={() => setNumBathrooms(numBathrooms + 1)}
                                                 className="button-plus border rounded-circle icon-shape icon-sm lh-0"
                                                 data-field="quantity"/>
                                         </div>
